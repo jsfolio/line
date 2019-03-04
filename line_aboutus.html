@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <link rel="stylesheet" href="line_menuwhite.css">
+     <link rel="stylesheet" href="footer_css.css">
+     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <title>LINE │ 회사소개</title>
+    <style>
+        .content{
+            width:100%;
+            margin:0 auto;
+            position: relative;
+        }
+        .sec1920{
+            width:100%;
+            background:#f5f5f5;
+        }
+        .sec1920_2{
+            width:100%;
+            overflow: hidden;
+        }
+        .top_con{
+            width:1440px;
+            margin:0 auto;
+        }
+        .aboutus_wrap{
+            overflow: hidden;
+            padding:75px 0 75px 0;
+            display: none;
+        }
+        .big_news{
+            width:688px;
+            overflow: hidden;
+            float: left;
+            position: relative;
+        }
+       
+        .news_img1{
+            width:100%;
+            height:541px;
+            background:url('img/aboutus_img1.png') no-repeat;
+        }
+
+        .title:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .news{
+            width:726px;
+
+            float: right;
+            border-left:1px solid #d6d6d6;
+            box-sizing: border-box;
+        }
+        .news ul{
+            width:350px;
+            float: left;
+        }
+        .news ul:nth-child(2){
+            float: right;
+            border-left:1px solid #d6d6d6;
+            box-sizing: border-box;
+  
+        }
+        .news li{
+            width:318px;
+            float:right;
+            list-style: none;
+            position: relative;
+        }
+        .height254{
+            width:100%;
+            height:254px;
+            background:gray;
+        }
+        .news_img2{
+            background:url('img/aboutus_img2.png') no-repeat;
+        }
+        .news_img5{
+            background:url('img/aboutus_img5.png') no-repeat;
+        }
+        .height290{
+            width:100%;
+            height:290px;
+            background:gray;
+        }
+        .news_img3{
+            background:url('img/aboutus_img3.png') no-repeat;
+        }
+        .news_img4{
+            background:url('img/aboutus_img4.png') no-repeat;
+        }
+        .news_txt{
+            padding:8px 10px 8px 0;
+            height:172px;
+            margin:22px 0 50px 0;
+            box-sizing: border-box;
+
+        }
+        .txt_box{
+            display: inline-block;
+            width:116px;
+            height:34px;
+            font-size:13px;
+            font-weight: bold;
+            border:1px solid;
+            box-sizing: border-box;
+            text-align:center;
+            line-height: 34px;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .update{
+            font-weight: bold;
+            margin-left:24px;
+            font-size:13px;
+            display: inline-block;
+            font-family:'Times New Roman', Times, serif;
+        }
+        .news_bold{
+            width:100%;
+            font-size:26px;
+            cursor: pointer;
+            margin-top:14px;
+        }
+        .news_bold:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .news_con{
+            margin-top:25px;
+            line-height: 28px;
+        }
+        .graph_img{
+            margin-top:50px;
+            width:100%;
+            height:720px;
+            background: gray;
+        }
+        .aboutus_text{
+            margin-top:50px;
+            width:100%;
+            height:400px;
+
+        }
+        ul.menu li:nth-child(1) a{
+            color:#00b800;
+        }
+        ul.menu li:nth-child(1) a::after{
+            left:0%;
+            width:100%;
+        }
+        .abt_txt{
+            float: left;
+            width:550px;
+            height:100%;
+        }
+        .abt_txt1{
+            margin-left:150px;
+        }
+        .abt_txt2{
+            margin-left: 30px;
+        }
+        .abt_txt .news_bold2{
+            font-size:26px;
+            text-align: center;
+        }
+        .abt_txt .news_con{
+            color:#777;
+            line-height: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_wrap">
+        
+        <div class="header">        
+            <div class="menuwrap">
+                <a href="index.html"><div class="logo"></div></a>
+                <ul class="menu">
+                    <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
+                    <li class="menusec1"><a href="line_service.html">서비스</a></li>
+                    <li class="menusec2"><a href="line_support.html">고객지원</a></li>
+                    <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
+                </ul>
+                <div class="search_box"> 
+                
+                    <div class="icon"></div>
+                    <input type="search" placeholder="search">
+               </div>   
+            </div> 
+        </div>
+
+        <div class="content">
+            <div class="sec1920">
+                <div class="top_con">
+                    <div class="aboutus_wrap">
+                        <div class="big_news"> 
+                            <div class="news_img1"></div>
+                            <div class="news_txt">
+                                <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                <p class="news_bold">Closing the distance, <br> 생활 전반을 아우르는 글로벌 Life 플랫폼으로</p>
+                                <p class="news_con">
+                                    3년 만에 전세계 월간 실 사용자 수 2억 명 이상을 확보한 LTE급 성장!<br>
+                                    50개 국의 다른 국적의 동료들과 함께 일하며 글로벌 마인드 향상<br>
+                                    호칭, 서열 파괴! 수평적인 기업문화를 자랑하는 일하기 좋은 기업
+                                </p>
+                                
+                            </div>
+                       </div>
+                        <div class="news">
+                            <ul>
+                                <li>
+                                    <div class="height254 news_img2"></div>
+                                    <div class="news_txt">
+                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <p class="news_bold">LINE's Mission</p>
+                                        <p class="news_con">‘MISSION’을 달성하기 위해 LINE 그룹 멤버들은
+                                            ‘LINE STYLE’과 ‘LINE CODE’에 따라 행동해야 합니다.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="height290 news_img3"></div>
+                                    <div class="news_txt">
+                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <p class="news_bold">LINE그룹 행동 규범</p>
+                                        <p class="news_con">본 행동 규범은 LINE그룹의 모두가 준수해야 하는 법적, 윤리적 행동 규범 입니다.</p>
+                                    </div>
+                                </li>
+                            </ul> 
+                            <ul>
+                                <li>
+                                    <div class="height290 news_img4"></div>
+                                    <div class="news_txt">
+                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <p class="news_bold">기사 및 보도자료</p>
+                                        <p class="news_con">라인, 보안 역량 강화 위해 세계적 화이트해커로 구성된 ‘그레이해쉬’ 인수</p>
+
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="height254 news_img5"></div>
+                                    <div class="news_txt">
+                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <p class="news_bold">LINE 로고 사용 가이드</p>
+                                        <p class="news_con">LINE 및 관련 서비스의 로고, 아이콘을 사용할 경우 본 가이드라인을 지켜주세요.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sec1920_2">
+                <img src="img/aboutus_center.png" alt="">
+                    <div class="top_con">
+                        <img src="img/increase.png" alt="">
+                        <div class="aboutus_text">
+                            <div class="abt_txt abt_txt1">
+                                <p class="news_bold2">LINE</p>
+                                <p class="news_con">
+                                    LINE은 2011년 6월 첫 출시 후 3년 만에 전 세계 사용자 5억 명이 함께 쓰는 명실상부한 글로벌 서비스로 성장했습니다. 현재 LINE은 17개 언어로 서비스되고 있으며, LINE의 서비스를 제공받는 국가의 수는 230개에 이릅니다. 일반적인 모바일 메신저를 넘어 전 세계 모든 사용자들이 일상생활 곳곳에서 친근하고 편리하게 사용할 수 있는 모바일 플랫폼을 제공하기 위해, 오늘도 LINE의 직원들은 세계 곳곳을 누비며 가슴 뛰는 도전을 펼치고 있습니다.
+                                </p>
+                            </div>
+                            <div class="abt_txt abt_txt2">
+                                <p class="news_bold2">LINE Plus Corporation
+                                </p>
+                                <p class="news_con">
+                                    LINE Plus Corporation은 2013년 한국에서 LINE의 글로벌 시장을 확장하기 위해 설립됐습니다. 세계 각국의 더 많은 사용자를 만나기 위해 기술, 디자인, 마케팅/영업, 홍보, 제휴 등의 분야에서 글로벌 업무가 진행되고 있습니다. 라인플러스의 직원들은 약 50개국에 이르는 각기 다른 국적의 동료들과 함께 글로벌 단위로 활동하고 있으며, 그 숫자는 점점 더 빠르게 증가하고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <footer>
+
+                <div class="footer_ulbox">
+                <ul class="footer_ul">
+                        <li>도움말</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>LINE Social Plugins</li>
+                        <li>LINE Creators Market</li>
+                        <li>LINE 로고 사용 가이드</li>
+                        <li>LINE 파트너스</li>
+                        <li>LINE 블로그</li>
+                        <li>채용정보</li>
+                </ul> 
+                <div class="address">
+                    <p>ⓒ LINE Corporation</p>
+                </div>
+                </div>
+               
+        </footer>
+        <!-- <input type="hidden" id="page_count" value="1"> -->
+    </div>
+
+    <script>
+      $(document).ready(function(){
+            $('.aboutus_wrap').fadeIn('slow');
+    
+            // if($('#page_count').val() == 1) {
+            //     $('ul.menu li:nth-child('+  + ') a::after')
+            // }
+      });
+    </script>
+</body>
+</html>

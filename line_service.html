@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="line_menuwhite.css">
+    <link rel="stylesheet" href="footer_css.css">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <title>LINE │ 서비스</title>
+    <style>
+    .content{
+            width:100%;
+            margin:0 auto;
+            position: relative;
+        }
+        .sec1920{
+            width:100%;
+            overflow: hidden;
+            /* background:#f5f5f5; */
+        }
+        ul.menu li:nth-child(2) a{
+            color:#00b800;
+        }
+        ul.menu li:nth-child(2) a::after{
+            left:0%;
+            width:100%;
+        }
+        .sec1920_2{
+            width:100%;
+        }
+        .top_con{
+            width:1440px;
+            margin:0 auto;
+            padding:36px;
+            box-sizing: border-box;
+        }
+        ul.main_service{
+            width:100%;
+            overflow: hidden;
+        }
+        ul.main_service li{
+            width:328px;
+            height:350px;
+            float: left;
+            list-style: none;
+            margin-right:18px;
+            cursor: pointer;
+            position: relative;
+        }
+        .app_info{
+            position: absolute;
+            width:100%;
+            height:80px;
+            background:rgba(0,0,0,0.6);
+            top:0;
+            left:0;
+            line-height: 70px;
+            padding:5px 8px 5px;
+            box-sizing: border-box;
+        }
+        .app_name{
+            display:inline-block;
+            width:40%;
+            color:#fff;
+            font-size:20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .btn_pos{
+            display: inline-block;
+            width:58%;
+            height: 80px;
+            text-align: right;
+        }
+        .app_more{
+            width:80px;
+            height:40px;
+            border:1px solid #00b800;
+            padding:8px;
+            background: #fff;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .app_down{
+            width:80px;
+            height:40px;
+            background:#00b800;
+            border:none;
+            color:#fff;
+            border:none;
+            cursor: pointer;
+            transition: all .3s;
+        }
+        .app_down:hover{
+            background:#fff;
+            color:#00b800;
+            border:1px solid #00b800;
+        }
+        ul.main_service li:last-child{
+            margin-right: 0;
+        }
+        .long_banner{
+            margin-top:35px;
+            width:100%;
+            height:145px;
+            cursor: pointer;
+        }
+        .third_sec{
+            margin-top:35px;
+            width:100%;
+            height:420px;
+        }
+        .third_1{
+            width:674px;
+            height: 100%;
+            float: left;
+            cursor: pointer;
+            position: relative;
+        }
+        .game_app_info{
+            position: absolute;
+            width:100%;
+            height:100px;
+            background:rgba(255,255,255,0.7);
+            bottom:0;
+            left:0;
+            line-height: 70px;
+            padding:2px 17px 5px;
+            box-sizing: border-box;
+        }
+        .info_wrap{
+            width:100%;
+            height:100%;
+        }
+        .linestage{
+            width:100%;
+            height:50px;
+            font-size:28px;
+            letter-spacing: -1px;
+            font-weight: 800;
+            float: left;
+        }
+        .linestage_sub{
+            float: left;
+            width:100%;
+            height:20px;
+            margin-top:-20px;
+        }
+        .info_wrap .app_down{
+            float: right;
+            margin-right:5px;
+            margin-top: -18px;
+        }
+        .third23{
+            width:328px;
+            height:100%;
+            float: left;
+            margin-left:18px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .third23 .app_info2{
+            position: absolute;
+            width:100%;
+            height:100px;
+            background:rgba(255,255,255,0.7);
+            bottom:-100px;
+            left:0;
+            line-height: 50px;
+            padding:25px 8px 5px 8px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+        }
+        .third23:hover .app_info2{
+            bottom:0;
+        }
+        .app_info2 .app_name{
+            color:#000;
+        }
+        .last_sec{
+            margin-top:35px;
+            width:100%;
+
+        }
+        .last12{
+            width:674px;
+            height:618px;
+            float: left;
+            cursor: pointer;
+        }
+        .last_2{
+            margin-left:18px;
+        }
+        .sticker_top{
+            width:100%;
+            height:176px;
+            float: left;
+        }
+        .sticker_slide_wrap{
+            width:100%;
+            height:437px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide{
+            position: absolute;
+            left:100%;
+            top:0;
+            width:100%;
+            height:100%;
+            transform: translateX(12%);
+        }
+       .slide_img1{background:url('img/sticker1.png') no-repeat;}
+       .slide_img2{background:url('img/sticker2.png') no-repeat;}
+       .slide_img3{background:url('img/sticker3.png') no-repeat;}
+
+
+       .header_btn{
+            width:80px;
+            height:80px;
+            position: absolute;
+            top:40%;
+            cursor: pointer;
+        }
+        .btn_left{
+          left:0;
+          animation: leftbtn_move 0.5s linear infinite alternate;
+        }
+        .btn_right{
+          right:0;
+          animation: rightbtn_move 0.5s linear infinite alternate;
+        }
+        @keyframes leftbtn_move {
+            0%{left:0}
+            100%{left:-8px;}
+        }
+        @keyframes rightbtn_move {
+            0%{right:0}
+            100%{right:-8px;}
+        }
+        .btn_left p, .btn_right p{
+            width:80px;
+            height:80px;
+            font-size: 50px;
+            font-weight: bold;
+            color:#797979;
+            text-align: center;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_wrap">
+        
+        <div class="header">        
+            <div class="menuwrap">
+                <a href="index.html"><div class="logo"></div></a>
+                <ul class="menu">
+                    <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
+                    <li class="menusec1"><a href="line_service.html">서비스</a></li>
+                    <li class="menusec2"><a href="line_support.html">고객지원</a></li>
+                    <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
+                </ul>
+                <div class="search_box"> 
+                
+                    <div class="icon"></div>
+                    <input type="search" placeholder="search">
+            </div>
+            </div> 
+        </div>
+
+        <div class="content">
+            <div class="sec1920">
+                <img src="img/service_main.png" alt="">
+                <div class="top_con">
+                    <ul class="main_service">
+                        <li><img src="img/service_message.png" alt="">
+                        <div class="app_info">
+                            <p class="app_name">라인 메세지</p>
+                            <div class="btn_pos">
+                            <button class="app_more">자세히</button>
+                            <button class="app_down">다운로드</button>
+                            </div>
+                        </div>
+                        </li>
+                        <li><img src="img/service_game.png" alt="">
+                            <div class="app_info">
+                                <p class="app_name">라인 게임즈</p>
+                                <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li><img src="img/service_camera.png" alt="">
+                            <div class="app_info">
+                                <p class="app_name">라인 카메라</p>
+                                <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li><img src="img/service_pay.png" alt="">
+                            <div class="app_info">
+                                <p class="app_name">라인 페이</p>
+                                <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="long_banner">
+                        <img src="img/service_fortune.png" alt="">
+                    </div>
+                    <div class="third_sec">
+                        <div class="third_1">
+                            <img src="img/service_game1.png" alt="">
+                            <div class="game_app_info">
+                                <div class="info_wrap">
+                                <p class="linestage">리듬을 타고 스테이지 데뷔!</p>
+                                <p class="linestage_sub">
+                                    다양한 코스튬과 신나는 음악까지!
+                                    LINE STAGE에서 멋진 무대를 보여주세요!
+                                </p>
+                             <button class="app_down">다운로드</button>
+                                </div>
+                               
+                                <!-- <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="third23 third_2">
+                            <img src="img/service_game2.png" alt="">
+                            <div class="app_info2">
+                                <p class="app_name">라인 러쉬</p>
+                                <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="third23 third_3">
+                            <img src="img/service_game3.png" alt="">
+                            <div class="app_info2">
+                                <p class="app_name">라인 버블2</p>
+                                <div class="btn_pos">
+                                <button class="app_more">자세히</button>
+                                <button class="app_down">다운로드</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="last_sec">
+                        <div class="last12 last_1">
+                            <img src="img/service_gojek.png" alt="">
+                        </div>
+                        <div class="last12 last_2">
+                            <div class="sticker_top">
+                                <img src="img/service_sticker.png" alt="">
+                            </div>
+                            <div class="sticker_slide_wrap">
+                                <div class="slide slide_img1"></div>
+                                <div class="slide slide_img2"></div>
+                                <div class="slide slide_img3"></div>
+                                <div class="header_btn btn_left" id="left"><p>〈</p></div>
+                                 <div class="header_btn btn_right" id="right"><p>〉</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+
+                <div class="footer_ulbox">
+                <ul class="footer_ul">
+                        <li>도움말</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>LINE Social Plugins</li>
+                        <li>LINE Creators Market</li>
+                        <li>LINE 로고 사용 가이드</li>
+                        <li>LINE 파트너스</li>
+                        <li>LINE 블로그</li>
+                        <li>채용정보</li>
+                </ul> 
+                <div class="address">
+                    <p>ⓒ LINE Corporation</p>
+                </div>
+                </div>
+               
+            </footer>
+    </div>
+    <script>
+        $(document).ready(function(){
+        
+            $('.slide').eq(0).css({
+                    left:0
+            });
+            auto_interval();
+        
+            var slide_interval = 800;
+            var index = 1;
+            $('#right').click(function(){ 
+                btn_init();
+                slide_move('.slide',(index - 1) % $('.slide').length, '-100%', index % $('.slide').length,'100%');
+                index++;
+            });
+            $('#left').click(function(){
+                btn_init();
+                index--; 
+                slide_move('.slide',index % $('.slide').length, '100%', (index - 1) % $('.slide').length, '-100%' );
+            });
+            function btn_init(){
+                $('.header_btn').css('pointer-events','none');
+                $('.header_btn ').css('pointer-events','none');
+                setTimeout(function(){
+                    $('.header_btn').css('pointer-events','auto');
+                    $('.header_btn').css('pointer-events','auto');
+                },slide_interval);
+
+            }
+            function slide_move(slide,now_index, now_pos, next_index, next_pos){ 
+                $(slide).eq(now_index).animate({
+                    left: now_pos
+                },slide_interval);
+
+                $(slide).eq(next_index).css({
+                    left:next_pos
+                }).animate({
+                    left:0,
+                },slide_interval);
+
+            }
+            var timer;
+            function auto_interval(){
+                timer = setInterval(function(){
+                    $('#right').trigger('click');
+                },3000);
+            }
+
+           
+              $('.sticker_slide_wrap').hover(function(){
+                clearInterval(timer);
+            }, function(){
+                auto_interval();
+            });
+        });
+    </script>
+</body>
+</html>

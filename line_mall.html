@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="line_menuwhite.css">
+    <link rel="stylesheet" href="footer_css.css">
+    <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <title>LINE │ 라인프렌즈</title>
+    <style>
+        .top_wrap{
+            width:100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .mall_header{
+            width:100%;
+            height:561px;       
+            position: relative;
+            overflow: hidden;
+           
+        }
+        .slide{
+            position: absolute;
+            left:100%;
+            top:0;
+            width:100%;
+            height:100%;
+
+        }
+       .slide_img1{background:url('img/line_mall1.png') no-repeat;}
+       .slide_img2{background:url('img/line_mall2.png') no-repeat;}
+       .slide_img3{background:url('img/line_mall3.png') no-repeat;}
+       .slide_img4{background:url('img/line_mall4.png') no-repeat;}
+
+       .header_btn{
+            width:80px;
+            height:80px;
+            position: absolute;
+            top:50%;
+            cursor: pointer;
+        }
+        .btn_left{
+          left:0;
+        }
+        .btn_right{
+          right:0;
+        }
+        .btn_left p, .btn_right p{
+            width:80px;
+            height:80px;
+            font-size: 50px;
+            color:#fff;
+            text-align: center;
+            position: absolute;
+        }
+        
+        .header_p_wrap{
+            top:100px;
+            width:1340px;
+            height:561px;
+            margin:0 auto;
+            
+        }
+        .item{
+            width:130px;
+            height: 35px;
+            color:#fff;
+            font-size:18px;
+            font-weight: bold;
+            line-height: 35px;
+            text-align: center;
+            background:#af000b;
+            border-radius: 25px;
+            font-family: 'Nanum Barun Gothic', sans-serif;
+        }
+        .header_p_wrap .header_p_pos{
+            position: absolute;
+            top:150px;
+            font-size:36px;
+            letter-spacing: -1px;
+            font-weight: bold;
+            font-family: 'Nanum Barun Gothic', sans-serif;
+            opacity: 0;
+            transition:all .3s;
+            transition-delay: 0.6s;
+
+        }
+        .header_add{
+            top:100px;
+            opacity:1;
+            transition: all .4s;
+            transition-delay: .7s;
+        }
+        .header_p_wrap .header_p{
+            font-size:18px;
+            letter-spacing: -1px;
+            font-weight: normal;
+        }
+        .header_p_wrap .big_bold{
+            margin-top:20px;
+            font-size:65px;
+            line-height: 75px;
+            font-weight: bold;
+            letter-spacing: -5px;  
+            font-family: 'Nanum Barun Gothic', sans-serif;  
+        }
+        .more{
+            height:30px;
+            border-bottom: 1px solid;
+            margin-top:10px;
+            cursor: pointer;
+        }
+
+       .content{
+            width:100%;
+            margin:0 auto;
+            position: relative;
+        }
+        .sec1920{
+            width:100%;
+        }
+        ul.menu li:nth-child(4) a{
+            color:#00b800;
+        }
+        ul.menu li:nth-child(4) a::after{
+            left:0%;
+            width:100%;
+        }
+        .sec1920_2{
+            width:100%;
+        }
+        .top_con{
+            width:1440px;
+            margin:0 auto;
+            padding:36px;
+            box-sizing: border-box;
+        }
+        .goods_wrap2{
+            width:100%;
+            height:470px;
+            background:#f6f6f6;
+            position: relative;
+            overflow: hidden;
+        }
+        .slide_ul{
+            position: relative;
+            left:-1055px;
+            width:3500px;          
+            height:430px;
+            top:20px;
+
+        }
+        .goods_slide{
+            width:308px;
+            height:430px;
+            background:#fff;
+            padding:20px;
+            box-sizing: border-box;
+            list-style: none;
+            margin: 0 10px 0;
+            cursor: pointer;
+            position: absolute;
+            transition: all .3s;
+        }
+        .info_sec{
+            width:270px;
+            height:130px;
+            /* background:pink; */
+            position: absolute;
+            bottom:0;
+            transition: all .3s;
+        }
+        .goods_slide:hover{
+            box-shadow: 0 0 20px #ccc;
+            background:#feff35;
+        }
+        .g_img_sec{
+            width:270px;
+            height:270px;
+            overflow: hidden;
+            transition: all .3s;
+           
+        }
+        .goods_slide:hover .g_img_sec{
+            height:350px;
+           
+        }
+        .goods_slide:hover .info_sec{
+            height:50px;
+        }
+
+        .goods_btn{
+            width:40px;
+            height:40px;
+            border:1px solid #8d8d8d;
+            background:#fff;
+            border-radius: 50%;
+            position: absolute;
+            top:45%;
+ 
+            cursor: pointer;
+        }
+        .g_btn_left{
+          left:0;
+        }
+        .g_btn_right{
+          right:0;
+        }
+        .goods_btn p{
+            width:40px;
+            height:40px;
+            font-size: 25px;
+            color:#777;
+            line-height: 40px;
+            text-align: center;
+            position: absolute;
+        }
+        ul.main_service li:last-child{
+            margin-right: 0;
+        }
+        .goods_wrap{
+            width:100%;
+            height:690px;
+            margin-left:30px;
+        }
+        .showmore_100{
+            height:40px;
+            margin-top:10px;
+            text-align: right;
+        }
+        .showmore{
+            width:1296px;
+            height:40px;
+            margin-top:10px;
+            text-align: right;
+        }
+        .showmore p, .showmore_100 p{
+            display: inline-block;
+            line-height: 25px;
+            margin-right: 15px;
+        }
+        .plus{
+            width:25px;
+            height:25px;
+            background:url('img/showmore.png') no-repeat;
+            float: right;
+            cursor: pointer;
+        }
+        .goods_ul{
+           width:93%;
+           overflow: hidden;
+            margin:0 auto;
+        }
+        .goods_ul li{
+            width:200px;
+            height:310px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            list-style: none;
+            float: left;
+            transition:all .3s;
+        }
+
+        .goods_ul li img{
+            cursor: pointer;
+            
+        }
+   
+        .goods_info{
+            margin-top:5px;
+            width:200px;
+            height:90px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .goods_bag{
+            position:absolute;
+            bottom:18px;
+            right:15px;
+        }
+        .goods_info > p.goods_name{
+            height:38px;
+            font-size:14px;
+            cursor: pointer;
+        }
+        .goods_info > p.goods_cost{
+            font-size: 14px;
+        }
+        .cost_bold{
+            color:#000;
+            font-size:18px;
+            font-weight: bold;
+        }
+        .notify_banner{
+            margin-top:25px;
+            width:100%;
+            height:60px;
+            /* border:1px solid #ccc; */
+            background:#fafafa;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .notify_img{
+            position: absolute;
+            left:130px;
+            bottom:-6px;
+        }
+        .slide_notify_wrap{
+            width:50%;
+            height:60px;
+            margin:0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slide_notify{
+            position: absolute;
+            left:100%;
+            top:0;
+            width:100%;
+            height:100%;
+            line-height: 60px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .btn_wrap{
+            position: absolute;
+            right:100px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .noti_btn{
+            width:25px;
+            height:25px;
+            display: inline-block;
+            border:1px solid #777;
+            background:#fff;
+            box-sizing: border-box;
+            right:100px;
+            cursor: pointer;
+        }
+        .btn_wrap p{
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+        }
+
+
+        .middle_banner{
+            margin-top:35px;
+            width:100%;
+            height:200px;
+            background:gray;
+        }
+        .big_banner{
+            margin-top:35px;
+            margin-bottom:35px;
+            width:100%;
+            height:400px;
+            background:url('img/bestseller_banner.png') no-repeat;
+        }
+        .third_sec{
+             width:100%;
+            height:420px;
+            margin-top:35px;
+            margin-bottom:35px;
+           
+        }
+        .event {cursor: pointer;}
+        .third_sec li{
+            width:444px;
+            height:100%;
+            background:gray;
+            list-style:none;
+            float: left;
+            margin-right:18px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .third_sec p{
+            position: absolute;
+            font-size: 14px;
+            top:130px;
+            left:50%;
+            color:#fa3c60;
+            transform:translateX(-50%);
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .thirdsec_2 p{
+            color:#ff7984;
+        }
+        .thirdsec_3 p{
+            color:#4a45cb;
+        }
+        .third_sec li:nth-child(3){
+            margin-right: 0;
+        }
+        .last_sec{
+            margin-top:35px;
+            width:100%;
+            height:475px;
+        }
+        .last12{
+            width:674px;
+            height:100%;
+            float: left;
+        }
+        .category{
+            width:100%;
+            height:65px;
+            text-align: center;
+            text-decoration: underline;
+            line-height: 65px;
+            font-size:24px;
+            margin-bottom: 5px;
+            box-sizing: border-box;
+            font-weight: bold;
+        }
+        .icon_sec{
+            height: 198px;
+        }
+        .name_tag{
+            width:70%;
+            float: left;
+        }
+        .more_tag{
+            font-weight: bold;
+            position: absolute;
+            bottom:10px;
+            right:0;
+            transition:all .3s;
+        }
+        .category_wrap{
+            height:147px;
+            padding:25px 0 0 7px;
+            box-sizing: border-box;
+        }
+        .category_wrap li{
+            width:100px;
+            height:40px;
+            background:#fff;
+            border:1px solid #ccc;
+            border-radius: 25px;
+            list-style: none;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .category_wrap li:nth-child(6){
+            margin-right: 0;
+        }
+        .category_wrap li:last-child{
+            margin-right: 0;
+        }
+        .category_wrap li:hover{
+            box-shadow: 3px 3px 10px #ddd;
+        }
+
+        .icon_wrap{
+            list-style: none;
+            width:calc(100% / 6);
+            box-sizing: border-box;
+            float: left;
+        }
+        .char_name{
+            width:100%;
+            height:36px;
+            text-align: center;
+            line-height: 30px;
+            color:#777;
+            cursor: pointer;
+        }
+        .char_name:hover{
+            text-decoration: underline;
+        }
+        .char_icon img{
+            cursor: pointer;
+        }
+        .char_icon{
+            text-align: center;
+        }
+        .last_2{
+            margin-left:18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top_wrap">
+        <div class="menuwrap"> 
+            <a href="index.html"><div class="logo"></div></a>
+            <ul class="menu">
+                <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
+                <li class="menusec1"><a href="line_service.html">서비스</a></li>
+                <li class="menusec2"><a href="line_support.html">고객지원</a></li>
+                <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
+            </ul>
+            <div class="search_box"> 
+                
+                    <div class="icon"></div>
+                    <input type="search" placeholder="search">
+            </div>
+                
+                
+        </div> 
+
+        <div class="mall_header">        
+            
+            <div class="slide slide_img1">
+                <div class="header_p_wrap">
+                <div class="header_p_pos header_p">
+                    <div class="item" style="background:#ee1bdc;">SEASON</div>
+                    <p class="big_bold" style="color:#fff">라인프렌즈<br> 윈터 컬렉션</p>
+                    <br>
+                    <p style="color:#fff;">브라운과 친구들이 준비한 홀리데이 시즌<br>
+                            아이템으로 훈훈한 겨울을 만끽하세요.<br>
+                            
+                        </p>
+                        <br>
+                        <span class="more" style="color:#fff;">More ▶</span>
+                </div>
+                
+            </div>    
+            </div>
+            <div class="slide slide_img2">
+                <div class="header_p_wrap">
+                    
+                    <div class="header_p_pos header_p">
+                        <div class="item">프렌즈픽</div>
+                        <p class="big_bold" style="color:#fff">더 예쁘게 <br> 돌아온 초코스틱</p>
+                        <br>
+                        <p>코코넛의 고소함과 초콜릿의 달콤함을<br>
+                        그대로 담은 코코넛 초코스틱! 이번에는<br>
+                        절대 놓치지 않을거예요~<br>
+                    </p>
+                    <br>
+                        <span class="more">More ▶</span>
+                    </div>
+                </div>    
+            </div>
+            <div class="slide slide_img3">
+                <div class="header_p_wrap">
+                    <div class="header_p_pos header_p">
+                        <div class="item" style="background:#000">COLLECTION</div>
+                        <p class="big_bold" style="text-shadow: 0px 0px 20px #fff;">유니크한<br> 아이폰 케이스</p>
+                        <br>
+                        <p>누구도 시도한 적 없고 상상한 적 없었던<br>
+                        브라운앤프렌즈와 헬베티카의 만남.</p>
+                        <br>
+                        <span class="more">More ▶</span>
+                    </div> 
+                </div>
+            </div>
+            <div class="slide slide_img4">
+                <div class="header_p_wrap">
+                    <div class="header_p_pos header_p">
+                        <div class="item" style="background:#160f79;">SEASON</div>
+                        <p class="big_bold" >브라운의 하얗고<br> 작은 세상</p>
+                        <br>
+                        <p>눈보라를 헤치며 선물 꾸러미를 들고 온
+                                반가운 손님!<br> 산타를 대신해
+                                나타난 브라운을 만나보세요.</p>
+                                <br>
+                        <span class="more">More ▶</span>
+                    </div>
+                </div>    
+            </div>
+           
+            <div class="header_btn btn_left" id="left"><p>〈</p></div>
+            <div class="header_btn btn_right" id="right"><p>〉</p></div>
+        </div>
+
+        <div class="content">
+            <div class="sec1920">
+                <div class="top_con">
+                     <div class="notify_banner">
+                         <div class="notify_img"><img src="img/notify_char.png" alt=""></div>
+                         <div class="slide_notify_wrap">
+                         <p class="slide_notify">[공지] 배송 지연 안내 (12/26 - 31)</p>
+                         <p class="slide_notify">[공지] 프렌즈 픽 메뉴 오픈 안내</p>
+                         <p class="slide_notify">[공지] 말해줘,너의 컬러! 택배박스 리뉴얼 이벤트</p>
+                         </div>
+                         <div class="btn_wrap">
+                         <div class="noti_btn" id="n_left"><p>〈</p></div>
+                         <div class="noti_btn" id="n_right"><p>〉</p></div>
+                         </div>
+                     </div>
+                     <ul class="third_sec">
+                        <li class="thirdsec_1">
+                            <p>More ▶</p>
+                            <img src="img/mall_sec1.png" alt=""></li>
+                        <li class="thirdsec_2">
+                            <p>More ▶</p>
+                            <img src="img/mall_sec2.png" alt=""></li>
+                        <li class="thirdsec_3">
+                            <p>More ▶</p>
+                            <img src="img/mall_sec3.png" alt=""></li>
+                    </ul>
+                      <div class="last_sec">
+                            <div class="last12 last_1">
+                                <img src="img/mall_sec4.png" alt="">
+                            </div>
+                            <div class="last12 last_2">
+                                <p class="category">카테고리</p>
+                                <ul class="category_wrap">
+                                    <li style="font-weight: bold">전체</li>
+                                    <li style="color:#f33553; font-weight:bold">세일</li>
+                                    <li>토이</li>
+                                    <li>문구</li>
+                                    <li>디지털</li>
+                                    <li>의류</li>
+                                    <li>패션잡화</li>
+                                    <li>유아동</li>
+                                    <li>여행/캠핑</li>
+                                    <li>오피스</li>
+                                    <li>리빙</li>
+                                    <li>주방/욕실</li>
+                                </ul>
+                                <p class="category">BROWN & FRIENDS</p>
+                                <ul class="icon_sec">
+                                    <li class="icon_wrap">
+                                        <p class="char_name">전체</p>
+                                        <div class="char_icon"><img src="img/char_icon0.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">브라운</p>
+                                        <div class="char_icon"><img src="img/char_icon1.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">코니</p>
+                                        <div class="char_icon"><img src="img/char_icon2.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">샐리</p>
+                                        <div class="char_icon"><img src="img/char_icon3.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">초코</p>
+                                        <div class="char_icon"><img src="img/char_icon4.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">레너드</p>
+                                        <div class="char_icon"><img src="img/char_icon5.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">문</p>
+                                        <div class="char_icon"><img src="img/char_icon6.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">제임스</p>
+                                        <div class="char_icon"><img src="img/char_icon7.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">제시카</p>
+                                        <div class="char_icon"><img src="img/char_icon8.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">팡요</p>
+                                        <div class="char_icon"><img src="img/char_icon9.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">에드워드</p>
+                                        <div class="char_icon"><img src="img/char_icon10.jpg" alt=""></div>
+                                    </li>
+                                    <li class="icon_wrap">
+                                        <p class="char_name">보스</p>
+                                        <div class="char_icon"><img src="img/char_icon11.jpg" alt=""></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="middle_banner">
+                        <img src="img/mall_banner1.png" alt="">
+                    </div>     
+                    <div class="showmore_100"><p>상품 더보기</p><div class="plus"></div> </div>
+                   <div class="goods_wrap2">
+                       
+                        <ul class="slide_ul">
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_1.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">브라운 차임벨 오뚝이</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_2.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag"> 헬베티카 브라운&프렌즈<br> 오렌지 크로스 에코백</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_3.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">브라운 & 샐리<br> 레더라이크 컬렉션</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_4.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">코니 실리콘 슬리브 아이스 텀블러</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_5.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">LINE FRIENDS X ARABIA <br> 도토리 브라운 머그&피규어</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_6.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">머그 컵커버 세트 360ml</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_7.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">헬베티카 브라운&프렌즈<br> 블랙 양장 다이어리</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_8.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">헬베티카 브라운&샐리<br> 블루 케이스</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_9.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">브라운&샐리<br> 목욕 놀이 세트</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                            <li class="goods_slide"><div class="g_img_sec">
+                                <img src="img/mall_g_10.png" alt=""></div>
+                            <div class="info_sec"><p class="name_tag">브라운&코니 커플 <br> 머그컵 세트 250ml</p><p class="more_tag">more &gt;</p></div>
+                        </li>
+                        </ul>
+                        <div class="goods_btn g_btn_left" id="g_left"><p>〈</p></div>
+                        <div class="goods_btn g_btn_right" id="g_right"><p>〉</p></div>
+                    </div>
+                    <div class="big_banner"></div>
+                    <div class="goods_wrap">
+                        <div class="showmore"><p>상품 더보기</p><div class="plus"></div> </div>
+                        <ul class="goods_ul">
+                            
+                            <li>
+                                <img src="img/goods1_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">브라운&프렌즈 2019 미니 캘린더</p>
+                                    <p class="goods_cost">노트/메모지</p>
+                                    <p class="cost_bold goods_cost">10,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods2_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">복주머니 피기브라운 인형 (45cm)</p>
+                                    <p class="goods_cost">자석 복주머니</p>
+                                    <p class="cost_bold goods_cost">68,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods3_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">피기 샐리 인형 (19cm)</p>
+                                    <p class="goods_cost">자석 복주머니</p>
+                                    <p class="cost_bold goods_cost">32,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods4_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">브라운 다루마 인형</p>
+                                    <p class="goods_cost">중형인형</p>
+                                    <p class="cost_bold goods_cost">28,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods5_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">골드 브라운 백참 인형 (17cm)</p>
+                                    <p class="goods_cost">Brown Gold Edition</p>
+                                    <p class="cost_bold goods_cost">11,200 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods6_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">초코 미니 점착 메모지</p>
+                                    <p class="goods_cost">A DAY OF FRIENDS</p>
+                                    <p class="cost_bold goods_cost">4,500원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods7_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">통통배 브라운 마그넷 (클립 포함)</p>
+                                    <p class="goods_cost">데스크정리</p>
+                                    <p class="cost_bold goods_cost">12,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods8_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">[갤럭시 S8] 안녕 샐리 하드케이스</p>
+                                    <p class="goods_cost">갤럭시 케이스</p>
+                                    <p class="cost_bold goods_cost">5,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods9_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">레너드&샐리 앉은 인형 (18cm)</p>
+                                    <p class="goods_cost">미니 인형</p>
+                                    <p class="cost_bold goods_cost">26,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods10_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">코니 머그 컵커버 세트 360ml</p>
+                                    <p class="goods_cost">컵/텀블러 </p>
+                                    <p class="cost_bold goods_cost">18,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods11_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">윈터 브라운 스노우볼</p>
+                                    <p class="goods_cost">시즌용품</p>
+                                    <p class="cost_bold goods_cost">25,000 원</p>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="img/goods12_off.jpg" alt="">
+                                <div class="goods_info">
+                                    <div class="goods_bag"><img src="img/shopping.png" alt=""></div>
+                                    <p class="goods_name">브라운 틴케이스 방향제</p>
+                                    <p class="goods_cost">방향제/차량용품</p>
+                                    <p class="cost_bold goods_cost">11,900 원</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="third_sec">
+                        <li class="event thirdsec_1"><img src="img/mall_event1.png" alt=""></li>
+                        <li class="event thirdsec_2"><img src="img/mall_event2.png" alt=""></li>
+                        <li class="event thirdsec_3"><img src="img/mall_event3.png" alt=""></li>
+                    </ul>
+                   
+                </div>
+
+            </div>
+        </div>
+        <footer>
+
+                <div class="footer_ulbox">
+                <ul class="footer_ul">
+                        <li>도움말</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>LINE Social Plugins</li>
+                        <li>LINE Creators Market</li>
+                        <li>LINE 로고 사용 가이드</li>
+                        <li>LINE 파트너스</li>
+                        <li>LINE 블로그</li>
+                        <li>채용정보</li>
+                </ul> 
+                <div class="address">
+                    <p>ⓒ LINE Corporation</p>
+                </div>
+                </div>
+               
+            </footer>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        
+            $('.slide').eq(0).css({
+                    left:0
+            });
+            $('.slide_notify').eq(0).css({
+                    left:0
+            });
+            $('.header_p_pos').eq(0).css({
+                    opacity: 1,
+                    top: '100px'
+            });
+            $('.goods_slide').eq((5) % 10).css({
+                boxShadow: '0 0 20px #ccc',
+                background:'#feff35'
+            });
+
+            $('.goods_slide .g_img_sec').eq((5) % 10).css({
+                height: '350px'
+            });
+            $('.goods_slide .info_sec').eq((5) % 10).css({
+                height: '50px'
+            });
+            $('.more_tag').eq((5) % 10).css({
+            color: '#f33553'
+            });
+            
+            auto_interval();
+            auto_interval2();
+            var slide_interval = 800;
+            var index = 1;
+            var index2 = 1;
+
+            $('#right').click(function(){ 
+                btn_init();
+                slide_move('.slide',(index - 1) % $('.slide').length, '-100%', index % $('.slide').length,'100%');
+               
+                $('.slide').eq((index - 1) % $('.slide').length).find($('.header_p_pos')).addClass('header_add');
+                $('.header_p_pos').eq(index % $('.slide').length).css({
+                    opacity: 0,
+                    top: '150px'
+                });
+                $('.header_p_pos').eq(index % $('.slide').length).animate({
+                    opacity: 1,
+                    top: '100px',
+
+                    // transitionDelay: '0.8s'
+                },300);
+                
+                index++;
+                
+            });
+            $('#left').click(function(){
+                btn_init();
+                index--; 
+                slide_move('.slide',index % $('.slide').length, '100%', (index - 1) % $('.slide').length, '-100%' );
+                $('.header_p_pos').eq((index-1) % $('.slide').length).css({
+                    opacity: 1,
+                    top: '100px'
+                });
+            });
+            $('#n_right').click(function(){ 
+                btn_init();
+                slide_move('.slide_notify',(index2 - 1) % $('.slide_notify').length, '-100%', index2 % $('.slide_notify').length,'100%');
+             
+                index2++;
+            });
+            $('#n_left').click(function(){
+                btn_init();
+                index2--; 
+                slide_move('.slide_notify',index2 % $('.slide_notify').length, '100%', (index2 - 1) % $('.slide_notify').length, '-100%' );
+            });
+
+            $(".goods_ul li img").mouseover(function() {
+                $(this).attr("src", $(this).attr("src").replace("_off.jpg","_on.jpg"));
+                });
+                $(".goods_ul li img").mouseout(function() {
+                    $(this).attr("src", $(this).attr("src").replace("_on.jpg", "_off.jpg"));
+            });
+     
+            function btn_init(){
+                $('.header_btn,.noti_btn, .goods_btn').css('pointer-events','none');
+
+                setTimeout(function(){
+                    $('.header_btn,.noti_btn, .goods_btn').css('pointer-events','auto');
+                },slide_interval);
+
+            }
+
+
+            var goods_slide = $('.goods_slide').css('width'); 
+            
+            for(var i = 0; i < $('.goods_slide').length; i++) {
+                // console.log(goods_slide.replace('px', '')  + 10);
+                $('.goods_slide').eq(i).css({
+                    left: (Number(goods_slide.replace('px', '')) + 10) * i
+                });
+            }
+
+            function slide_move(slide,now_index, now_pos, next_index, next_pos){ 
+                $(slide).eq(now_index).animate({
+                    left: now_pos
+                },slide_interval);
+
+                $(slide).eq(next_index).css({
+                    left:next_pos
+                }).animate({
+                    left:0,
+                },slide_interval);
+
+            }
+            
+            var g_index = 0;
+            $('#g_right').click(function(){ 
+                btn_init();
+                console.log(g_index % $('.goods_slide').length)
+                // if($('.goods_slide').css('left') == "1908px") {
+                //     // alert($('.goods_slide').eq(6).css('left'));
+                // }
+                $('.goods_slide').animate({
+                    left: "-="+(Number(goods_slide.replace('px', '')) + 10)
+                }, 300);
+                
+                setTimeout(function(){
+                    $('.goods_slide').eq(g_index % $('.goods_slide').length).animate({
+                        left: "2862px"
+                    }, 0);
+                    
+                    g_index++; 
+                    
+
+                }, 300);
+                
+                i++;
+                $('.goods_slide').css({
+                    boxShadow: '0 0 0 transparent',
+                    background:'#fff'
+                });
+                $('.goods_slide .g_img_sec').css({
+                        height: '270px'
+                    });
+                $('.goods_slide .info_sec').css({
+                        height: '130px'
+                });
+                $('.more_tag').css({
+                    color: '#000'
+                });
+               
+                    
+                setTimeout(function(){
+                    $('.goods_slide').eq((i+5) % 10).css({
+                        boxShadow: '0 0 20px #ccc',
+                        background:'#feff35'
+                    });
+
+                    $('.goods_slide .g_img_sec').eq((i+5) % 10).css({
+                        height: '350px'
+                    });
+                    $('.goods_slide .info_sec').eq((i+5) % 10).css({
+                        height: '50px'
+                    });
+                    $('.more_tag').eq((i+5) % 10).css({
+                    color: '#f33553'
+                   });
+                },500);
+            
+            });
+            $('#g_left').click(function(){ 
+                btn_init();
+         
+                $('.goods_slide').animate({
+                    left: "+="+(Number(goods_slide.replace('px', '')) + 10)
+                }, 300);
+                
+                setTimeout(function(){
+                    $('.goods_slide').eq(g_index % $('.goods_slide').length).animate({
+                        left: "308px"
+                    }, 0);
+                    
+                    g_index--; 
+                    
+
+                }, 300);
+                
+                i--;
+                console.log(i);
+                $('.goods_slide').css({
+                    boxShadow: '0 0 0 transparent',
+                    background:'#fff'
+                });
+                $('.goods_slide .g_img_sec').css({
+                        height: '270px'
+                    })
+                $('.goods_slide .info_sec').css({
+                        height: '130px'
+                });
+                $('.more_tag').css({
+                    color: '#000'
+                });
+                    
+                setTimeout(function(){
+                    $('.goods_slide').eq((i-5) % 10).css({
+                        boxShadow: '0 0 20px #ccc',
+                        background:'#feff35'
+                    });
+
+                    $('.goods_slide .g_img_sec').eq((i-5) % 10).css({
+                        height: '350px'
+                    });
+                    $('.goods_slide .info_sec').eq((i-5) % 10).css({
+                        height: '50px'
+                    });
+                    $('.more_tag').eq((i-5) % 10).css({
+                    color: '#f33553'
+                    });
+                },500);
+            
+            });
+      
+             
+            var timer;
+            var timer2;
+            function auto_interval(){
+                timer = setInterval(function(){
+                    $('#right').trigger('click');
+                },3000);
+            }
+            function auto_interval2(){
+                timer2 = setInterval(function(){
+                    $('#g_right').trigger('click');
+                },2000);
+            }
+
+           
+              $('.mall_header').hover(function(){
+                clearInterval(timer);
+            }, function(){
+                auto_interval();
+            });
+            $('.goods_slide').hover(function(){
+                clearInterval(timer2);
+            }, function(){
+                auto_interval2();
+            });
+        });
+    </script>
+</body>
+</html>
