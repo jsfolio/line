@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge; chrome =1">
     <title>LINE Corporation</title>
+    <meta name="description" content="웹 퍼블리셔 포트폴리오">
+    <meta name="keywords" content="웹 퍼블리셔, 포트폴리오">
+    <meta name="author" content="jhm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="test">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="웹 퍼블리셔 포트폴리오">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="test">
+    <meta name="twitter:description" content="웹 퍼블리셔 포트폴리오">
+
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <link rel="stylesheet" href="modal.css">
-    <link rel="stylesheet" href="footer_css.css">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/footer_css.css">
     <style>
-        *{font-family: 'Nanum Gothic', sans-serif;
-        margin:0; padding:0;
+        .wrapper{
+            width:1903px;
         }
-     
-        .top_wrap{
-            width:100%;
-            overflow: hidden;
-        }
-        .header{
-            width:100%;
+        header{
             height:810px;       
+            position:relative;
+        }
+        .slide_wrapper{
             position: relative;
-            overflow: hidden;
-           
+            height:100%;
+            overflow:hidden;
         }
         .slide{
             position: absolute;
@@ -31,33 +39,28 @@
             top:0;
             width:100%;
             height:100%;
-
+            
         }
        .slide_img1{background:url('img/mainslide1.png') no-repeat;}
        .slide_img2{background:url('img/mainslide2.png') no-repeat;}
        .slide_img3{background:url('img/mainslide3.png') no-repeat;}
         .menuwrap{
             line-height: 100px;
-            width:1440px;
+            width:100%;
+             max-width:1440px;
             height:100px;
             margin:0 auto;
             position: relative;
             margin-top:30px;
         }
-        .logo{
-            width:173px;
-            height:67px;
-            display: inline-block;
-            background:url('./img/linelogo.png') no-repeat center / contain;
-            margin-bottom:15px;
+        .menuwrap h1{
+            float: left;
             cursor: pointer;
         }
         ul.menu{
-            
             line-height: 100px;
             width:1058px;
             height:100px;
-            
             text-align: center;
             display: inline-block;
         }
@@ -134,8 +137,7 @@
             left:0%;
             width:100%;
         } 
-        
-        
+         
         .header_btn{
             width:40px;
             height:36px;
@@ -162,37 +164,30 @@
 
         }
         .slide_order{
-        background-color:#00b800;
-        border-radius: 17px 0 0 17px;
-        box-sizing: border-box;
-        position: absolute;
-        top:50%;
-        right:40px;
-        width: 100px;
-        height: 36px;
-
-        
+            background-color:#00b800;
+            border-radius: 17px 0 0 17px;
+            box-sizing: border-box;
+            position: absolute;
+            top:50%;
+            right:40px;
+            width: 100px;
+            height: 36px;
         }
         ul.order_circle_wrap{
-
             margin:13px 20px 13px 23px;
             line-height:36px;
         }
         .slide_order li{
-            width:11px;
-            height:10px; 
-            list-style: none;
             float: left;
-
             overflow: hidden;
             margin-right:12px;
+            width:11px;
+            height:10px; 
             box-sizing: border-box;
             cursor: pointer;
         }
         .slide_order li:nth-child(3){margin-right: 0;}
         .circle_img{
-            list-style: none;
-            width:100%;
             height:100%;
             background:url('img/slide_order.png')no-repeat;
             color:#fff;
@@ -205,17 +200,13 @@
             background:red;
         }
         #right:hover .before{
-           
             right:28px;
-      
             display: block;
         }
   
-   
         .header_p_wrap{
             top:100px;
             max-width:1340px;
-            height:515px;
             margin:0 auto;
             position: relative;
         }
@@ -261,7 +252,6 @@
         .down_btn{
             width:180px;
             height:40px;
-            /* line-height: 40px; */
             font-size:15px;
             font-weight: bold;
             color:#fff;
@@ -271,7 +261,6 @@
             top:350px;
             left:130px;
             cursor: pointer;
-            outline: none;
             transition: all .2s;
         }
         .down_btn:hover{
@@ -285,21 +274,19 @@
             width:100%;
             height:195px;
 
-            border-top:1px solid rgba(255,255,255,0.4);
+            border-top:1px solid rgba(255,255,255,0.6);
             background:transparent;
             box-sizing: border-box;
         }
         .btm_sec_1440wrap{
-            width:1340px;
+            width:1440px;
             height:196px;
-            margin:0 auto;
-           
+            margin:0 auto;      
         }
         .bottom_box{
             width:206px;
             height:100%;
-            background:rgba(255,255,255,0.3);
-            cursor: pointer;  
+            background:rgba(255,255,255,0.6); 
             transition: all .3s;
         }
         .bottom_box:hover{
@@ -314,11 +301,9 @@
             margin-left:2px;
         }
         .text_box{
-            width:100%;
             margin-top:64px;
             padding:0 8px 0;
-            box-sizing: border-box;
-            
+            box-sizing: border-box;  
         }
         p.bold{
             color:#02bf01;
@@ -387,19 +372,13 @@
        }
        
 
-
-
-        .content{
-            width:100%;
-            position: relative;
-        }
         .top_con{
            width:1440px;
-            margin:0 auto;
-            margin-top:20px;
+           margin:0 auto;
+           margin-top:20px;
+           position:relative;
         }
         .nslide_wrap{
-            width:100%;
             height:117px;
             margin:0 auto;
             position: relative;
@@ -412,9 +391,7 @@
             width:100%;
             height:100%;
         }
-       .n_slide_img1{background:url('img/n_slide1.png') no-repeat;}
-       .n_slide_img2{background:url('img/n_slide2.png') no-repeat;}
-       .n_slide_img3{background:url('img/n_slide3.png') no-repeat;}
+
        .n_slide_btn{
             width:55px;
             height:58px;
@@ -432,16 +409,12 @@
             font-size: 58px;
             font-weight: bold;
             color:#fff;
-            text-align: center;
-     
-           
+            text-align: center;  
         }
         
         .news_wrap{
             margin-top:40px;
-            width:100%;
             height:596px;
-    
         }
         .big_news{
             width:720px;
@@ -451,7 +424,7 @@
             position: relative;
         }
         .title{
-           
+            display:block;
             font-size:30px;
             font-weight: bold;
             color:#fff;
@@ -478,7 +451,6 @@
             border-right:8px solid #e4e4e4;
             border-bottom:8px solid #e4e4e4;
             box-sizing: border-box;
-            list-style: none;
             position: relative;
         }
         .news li:nth-child(2),
@@ -497,16 +469,15 @@
             padding-right: 12px;
             box-sizing: border-box;
         }
-
         .news_bold{
             font-weight: bold;
             color:#00b800;
         }
         .news_con{
+            display:block;
             height:87px;
             margin-top:65px;
             font-size:25px;
-            cursor: pointer;
         }
         .news_con:hover{
             text-decoration: underline;
@@ -519,23 +490,17 @@
             color:#969799;
             font-weight: bold;
         }
-        
-
 
         .emoji_back{
-            width:100%;
             height:497px;
             background:url('img/emoji.png') no-repeat;
             position: relative;
         }
         .congrat{
             position: absolute;
-            width:354px;
-            height:145px;
             top:10%;
             left:50%;
             transform: translate(-50%,-10%);
-            background:url('img/congra.png')no-repeat;
             opacity: 0;
             transition: all .3s;
         }
@@ -543,17 +508,10 @@
             margin-right: 0;
         }
         .three_section{
-            width:100%;
-            height:1348px;
+            height:1448px;
             background:#03ce32;
         }
-         .wrap1440{
-            width:1440px;
-            position: relative;
-            margin:0 auto;
-        }
         .sec1920{
-            width:100%;
             height:852px;
             background:#e0e0e0;
         }
@@ -574,7 +532,6 @@
         }
 
         .center_title{
-            width:100%;
             height:178px;
             text-align: center;
             font-weight: 800;
@@ -583,11 +540,9 @@
             line-height: 228px;
         }
         .slide_3wrap{
-            width:100%;
             height:720px;
             overflow: hidden;
             position: relative;
-
         }
         .slide_3{
             position: absolute;
@@ -595,7 +550,6 @@
             top:0;
             width:100%;
             height:100%;
-
         }
         .s3_slide_btn{
             width:55px;
@@ -615,19 +569,14 @@
             font-weight: bold;
             color:#fff;
             text-align: center;
-     
-           
         }
         .pic_sec{
-            width:100%;
             height:450px;
             padding:30px;
             background:#fff;
             box-sizing: border-box;
         }
         .pic_sec2{
-           
-            width:100%;
             height:614px;
             padding:30px;
             opacity: 0;
@@ -636,7 +585,6 @@
             box-sizing: border-box;
         }
         .center_title2{
-            width:100%;
             height:100px;
             text-align: center;
             font-weight: bold;
@@ -646,7 +594,6 @@
         }
         .pic, .pic2{
             float: left;
-
         }
 
         .pic:first-child{
@@ -670,10 +617,7 @@
             height:300px;
         }
         .pic_size2{
-            width:100%;
-            height:430px;
             position: relative;
-            cursor: pointer;
         }
         
         .pic_txt{
@@ -706,16 +650,11 @@
             color:#fff;
         }
         .menu_4sec{
-            margin:0 auto;
-            width:100%;
-            height:720px;
-            text-align: center;
-            overflow: hidden;
             margin-top:-92px;
+            overflow:hidden;
         }
 
         .menu_4sec li{
-            list-style: none;
             float: left;
             box-sizing: border-box;
             overflow: hidden;
@@ -746,108 +685,96 @@
         .menu_4sec li:hover .con_img{
             transform: scale(1.1);
         }
-        .last_img{
-            width: 100%;
-            height:300px;
-            background: url('img/last_img.png') no-repeat;
-            margin:0 auto;
-        }
-        .mobile_wrap{
-            width:1440px;
-            height:100vh;
-            margin:0 auto;
-            position: relative;
-        }
-     
+
     </style>
 </head>
 <body>
-    <div class="top_wrap">
-        
-        <div class="header">
-                
-            <div class="slide slide_img1">
-                <div class="header_p_wrap">
-                <div class="header_p_pos header_p">
-                    LINE의 미션은 
-                    <br>
-                    사람과 사람, 정보,서비스 사이의<br>
-                     거리를 좁히는 것입니다.
-                </div>
-                <button class="down_btn">LINE Download 〉</button>
-            </div>    
-            </div>
-            <div class="slide slide_img2">
-                <div class="header_p_wrap">
-                    <div class="header_p_pos header_p2">
-                        <p class="big_green">LINE Family Apps</p>
+    <div class="wrapper">
+        <header>
+            <div class="slide_wrapper">
+                <div class="slide slide_img1">
+                    <div class="header_p_wrap">
+                    <div class="header_p_pos header_p">
+                        LINE의 미션은 
                         <br>
-                        LINE과 함께 당신의 모바일 라이프를 더욱 쉽고 스마트하게
+                        사람과 사람, 정보,서비스 사이의<br>
+                        거리를 좁히는 것입니다.
                     </div>
+                    <button class="down_btn">LINE Download 〉</button>
                 </div>    
-            </div>
-            <div class="slide slide_img3">
-                <div class="header_p_wrap">
-                    <div class="header_p_pos header_p3">
-                        <p class="normal_p">라인프렌즈 신상품이 궁금하면?</p>
-                        지금 온라인 스토어로!
-                   </div> 
                 </div>
+                <div class="slide slide_img2">
+                    <div class="header_p_wrap">
+                        <div class="header_p_pos header_p2">
+                            <p class="big_green">LINE Family Apps</p>
+                            <br>
+                            LINE과 함께 당신의 모바일 라이프를 더욱 쉽고 스마트하게
+                        </div>
+                    </div>    
+                </div>
+                <div class="slide slide_img3">
+                    <div class="header_p_wrap">
+                        <div class="header_p_pos header_p3">
+                            <p class="normal_p">라인프렌즈 신상품이 궁금하면?</p>
+                            지금 온라인 스토어로!
+                    </div> 
+                    </div>
+                </div>
+                
+                <div class="menuwrap">
+                    <h1><a href="index.html">
+                        <img src="./img/linelogo.png" alt="라인 코퍼레이션">
+                    </a></h1>
+                    <ul class="menu">
+                        <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
+                        <li class="menusec1"><a href="line_service.html">서비스</a></li>
+                        <li class="menusec2"><a href="line_support.html">고객지원</a></li>
+                        <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
+                    </ul>
+                    <ul class="language">
+                        <li class="lan_click lan_active">KOR</li>
+                        <li class="lan_click">ENG</li>
+                        <li class="lan_click">JPN</li>
+                    </ul>           
+                </div> 
             </div>
-            <div class="menuwrap">
-                <a href="index.html"><div class="logo"></div></a>
-                <ul class="menu">
-                    <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
-                    <li class="menusec1"><a href="line_service.html">서비스</a></li>
-                    <li class="menusec2"><a href="line_support.html">고객지원</a></li>
-                    <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
-                </ul>
-                 <ul class="language">
-                    <li class="lan_click lan_active">KOR</li>
-                    <li class="lan_click">ENG</li>
-                    <li class="lan_click">JPN</li>
-                </ul>           
-            </div> 
-
-            <div class="header_btn btn_left" id="left"><p>〈</p></div>
-            <div class="header_btn btn_right" id="right"><p>〉</p></div>
+            <div class="header_btn btn_left" id="left" title="이전 슬라이드"><p>〈</p></div>
+            <div class="header_btn btn_right" id="right" title="다음 슬라이드"><p>〉</p></div>
             <div class="slide_order">
                 <ul class="order_circle_wrap">
-                    <li class="order_circle order1"><div class="circle_img"></div></li>
-                    <li class="order_circle order2"><div class="circle_img"></div></li>
-                    <li class="order_circle order3"><div class="circle_img"></div></li>
+                    <li class="order_circle order1"><div class="circle_img" title="첫번째 슬라이드"></div></li>
+                    <li class="order_circle order2"><div class="circle_img" title="두번째 슬라이드"></div></li>
+                    <li class="order_circle order3"><div class="circle_img" title="세번째 슬라이드"></div></li>
                 </ul>
             </div>
-
 
             <div class="header_btm_sec">
                 <div class="btm_sec_1440wrap">
-                    <div class="bottom_box bottom_sec1">
+                    <a href="#" class="bottom_box bottom_sec1">
                         <div class="text_box">
                             <p class="bold">LINE NEWS</p>
                             <P class="text_con">최신 뉴스부터 엔터테인먼트 <br>정보까지,놓칠 수 없는 뉴스를<br>전해드립니다.</P>
                         </div>
-                    </div>
-                    <div class="bottom_box bottom_sec2">
+                    </a>
+                    <a href="#" class="bottom_box bottom_sec2">
                             <div class="text_box">
                                 <p class="bold">LINE Creators Market</p>
                                 <P class="text_con">
                                     크리에이터스만을 위한 정보와 <br>추천 아이템들을 소개해드립니다.
                                 </P>
                             </div>
-                    </div>
+                    </a>
                     <div class="bottom_sec3">
                         <div class="text_box">
                             <p class="bold" style="color:white">LINE LIVE</p>
                         </div>
                         <div class="youtubewrap">
                             <div class="youtube">
-                                <div class="play_btn"><div class="triangle"></div></div>
+                                <div class="play_btn" title="홍보영상 재생"><div class="triangle"></div></div>
                             </div>
                     
                         </div>
                     </div>
-                
                 </div>
             </div>
             <div id="myModal" class="modal">
@@ -857,25 +784,28 @@
                         allowfullscreen></iframe>
                     </div>
             </div>
-        </div>
-            
-           
-            
+        </header>
+    
         <div class="content">
             <div class="top_con">
                 <div class="nslide_wrap">
-                <div class="news_slide n_slide_img1"></div>
-                <div class="news_slide n_slide_img2"></div>
-                <div class="news_slide n_slide_img3"></div>
-                <div class="n_slide_btn n_btn_left" id="n_left"><p>〈</p></div>
-                <div class="n_slide_btn n_btn_right" id="n_right"><p>〉</p></div>
+                <div class="news_slide">
+                    <a href="#"><img src="./img/n_slide1.png" alt="라인 라이브"></a>
                 </div>
-                <div class="news_wrap">
+                <div class="news_slide">
+                    <a href="#"><img src="./img/n_slide2.png" alt="라인 디벨로퍼 2017"></a>
+                </div>
+                <div class="news_slide">
+                    <a href="#"><img src="./img/n_slide3.png" alt="클로버"></a>
+                </div>
+                <div class="n_slide_btn n_btn_left" id="n_left" title="이전으로"><p>〈</p></div>
+                <div class="n_slide_btn n_btn_right" id="n_right" title="다음으로"><p>〉</p></div>
+                </div>
+                <div class="news_wrap" title="라인 코퍼레이션 뉴스">
                     <div class="big_news">
                         <div class="news_txt">
-                             <p class="title">라인, 글로벌 개발 기술 컨퍼런스<br> ‘LINE DEV DAY 2018’ 개최</p>
-                            <p class="subtitle"> ‘넥스트 라인’ 주제로 60여개 세션 진행, 새로운 기술 영역에 도전하는 라인의 비전 공개</p>
-                           
+                            <a class="title">라인, 글로벌 개발 기술 컨퍼런스<br> ‘LINE DEV DAY 2018’ 개최</a>
+                            <p class="subtitle"> ‘넥스트 라인’ 주제로 60여개 세션 진행, 새로운 기술 영역에 도전하는 라인의 비전 공개</p>  
                         </div>
                     </div>
                     <div class="news">
@@ -883,28 +813,28 @@
                             <li>
                                 <div class="news_txt">
                                     <p class="news_bold">라인 주식회사</p>
-                                    <p class="news_con">라인, 글로벌 암호화폐 거래소 비트박스에 아이콘(ICX) 상장</p>
+                                    <a href="#" class="news_con">라인, 글로벌 암호화폐 거래소 비트박스에 아이콘(ICX) 상장</a>
                                     <p class="news_date">2018-11-27</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="news_txt">
                                     <p class="news_bold">LINE Games</p>
-                                    <p class="news_con">전세계 2천만 이용자의 라인 디즈니 썸썸, 국내 서비스 시작</p>
+                                    <a href="#" class="news_con">전세계 2천만 이용자의 라인 디즈니 썸썸, 국내 서비스 시작</a>
                                     <p class="news_date">2018-09-18</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="news_txt">
                                     <p class="news_bold">라인 주식회사</p>
-                                    <p class="news_con">사업 전략 발표회 ‘라인 컨퍼런스 2018’ 개최</p>
+                                    <a href="#" class="news_con">사업 전략 발표회 ‘라인 컨퍼런스 2018’ 개최</a>
                                     <p class="news_date">2018-06-26</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="news_txt">
                                     <p class="news_bold">라인 서비스</p>
-                                    <p class="news_con">라인페이 카드, 3일 만에 가입자 수 10만 명 돌파</p>
+                                    <a href="#" class="news_con">라인페이 카드, 3일 만에 가입자 수 10만 명 돌파</a>
                                     <p class="news_date">2018-03-29</p>
                                 </div>
                             </li>
@@ -912,45 +842,45 @@
                     </div>
                 </div>
                 <div class="emoji_back">
-                    <div class="congrat"></div>
+                    <div class="congrat"><img src="./img/congra.png" alt="패밀리앱 다운로드 10억돌파!"></div>
                 </div>
 
             </div>
-            <div class="three_section">
+            <div class="three_section" title="라인 서비스 어플리케이션">
               
-                <div class="wrap1440">
+                <div class="top_con">
                     <ul class="icon_list">
-                        <li><img src="img/line_call_off.png" alt=""></li>
-                        <li><img src="img/line_at_off.png" alt=""></li>
-                        <li><img src="img/line_game_off.png" alt=""></li>
-                        <li><img src="img/line_pay_off.png" alt=""></li>
-                        <li><img src="img/line_live_off.png" alt=""></li>
-                        <li><img src="img/line_camera_off.png" alt=""></li>
+                        <li><img src="img/line_call_off.png" alt="라인콜"></li>
+                        <li><img src="img/line_at_off.png" alt="라인 앳"></li>
+                        <li><img src="img/line_game_off.png" alt="라인 게임"></li>
+                        <li><img src="img/line_pay_off.png" alt="라인 페이"></li>
+                        <li><img src="img/line_live_off.png" alt="라인 라이브"></li>
+                        <li><img src="img/line_camera_off.png" alt="라인 카메라"></li>
                     </ul>
-                    <div class="s3_slide_btn s3_btn_left" id="s3_left"><p>〈</p></div>
-                     <div class="s3_slide_btn s3_btn_right" id="s3_right"><p>〉</p></div>
+                    <div class="s3_slide_btn s3_btn_left" id="s3_left" title="이전 컨텐츠"><p>〈</p></div>
+                     <div class="s3_slide_btn s3_btn_right" id="s3_right" title="다음 컨텐츠"><p>〉</p></div>
                     <div class="slide_3wrap">
                     <div class="slide_3">
                         <div class="center_title">무료 영상/음성 통화 LINE Call</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/call_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">스팸 차단에서 전세계 6억개 전화번호까지</p>
                                 <p class="pic_subtxt">스마트폰의 필수앱, 라인 후스콜이 당신을 지켜드립니다.</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/call_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">라인으로 손쉽게 국제전화하기</p>
                                 <p class="pic_subtxt">휴대폰, 국제통화 어디에 걸어도 더 저렴하게</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/call_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">저렴한 전화 서비스 ‘라인 콜’ 오픈!</p>
                                 <p class="pic_subtxt">라인 웹스토어에서 콜 크레딧 구매하면 보너스 크레딧을 더 드려요!</p>
                             </div>
@@ -960,23 +890,23 @@
                         <div class="center_title">LINE At, 네이버가 만드는 ‘O2O’ 세상</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/at_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">고객의 타임라인에 메시지를 올려보세요.</p>
                                 <p class="pic_subtxt">고객의 관심사를 파악하고 더욱 친밀하게 소통하실 수 있어요.</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/at_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">비즈니스 사용자를 위한 LINE</p>
                                 <p class="pic_subtxt">내 업체, 브랜드와 상품의 장점을 효과적으로 홍보하세요.</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/at_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">라인 앳 계정만들면 무조건 델라페 증정!</p>
                                 <p class="pic_subtxt">라인앳 계정 만들면 델라페 쏜다!</p>
                             </div>
@@ -986,23 +916,23 @@
                         <div class="center_title">친구, 연인, 가족 누구라도 쉽게 즐길 수 있는 LINE Games</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/game_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">라인팝 서비스 하루만에 300만 다운로드</p>
                                 <p class="pic_subtxt">인기 캐릭터들이 게임 퍼즐로 등장하는 '라인팝' 출시</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/game_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">LINE, 게임분석 어떻게 하나?</p>
                                 <p class="pic_subtxt">세미나 통해 게임 서비스 관련 경험과 지식 공유</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/game_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">“라인 게임 서버 개발, 도무지 질리지가 않아요”</p>
                                 <p class="pic_subtxt">김정하 개발자가 들려주는 서버 개발 세계</p>
                             </div>
@@ -1012,23 +942,23 @@
                         <div class="center_title">충전 후 송금과 결제를 바로바로, LINE Pay</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/pay_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">라인페이, 대만서 1위 모바일 결제 플랫폼</p>
                                 <p class="pic_subtxt">라인페이가 가장 많이 사용되는 모바일 결제 서비스로 선정됐다.</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/pay_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">보기 좋은 카드가 쓰기도 좋다</p>
                                 <p class="pic_subtxt">라인페이 이용자라면 누구나 발급받을 수 있는 선불 카드</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/pay_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">라인페이로 해외직구 쉽고 간편하게</p>
                                 <p class="pic_subtxt">저렴한 해외직구 상품을 무료배송으로 만나보세요.</p>
                             </div>
@@ -1038,23 +968,23 @@
                         <div class="center_title">실시간 동영상 서비스, LINE Live</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/live_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">실시간 라이브 방송</p>
                                 <p class="pic_subtxt">라인 라이브 안드로이드용 앱 다운로드 [바로가기]</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/live_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">5일 만에 누적 시청자 수 1천만 명 돌파!</p>
                                 <p class="pic_subtxt">다양한 채널을 통해 실시간으로 시청하세요.</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/live_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">누구나 간단하게 실시간 라이브</p>
                                 <p class="pic_subtxt">LINE LIVE로 나만의 실시간 스트리밍</p>
                             </div>
@@ -1064,23 +994,23 @@
                         <div class="center_title">LINE Camera로 셀피에 재미있는 효과 더하기</div>
                         <div class="pic_sec">
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/camera_1.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">새롭게 바뀐 라인 카메라</p>
                                 <p class="pic_subtxt">「aillis」에서 「LINE Camera」로 진화! 새로운 기능을 만나보세요. </p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/camera_2.png" alt="">
-                                </div>
+                                </a>
                                 <p class="pic_txt">탑재된 다양한 필터</p>
                                 <p class="pic_subtxt">섬세한 필터와 편집으로 퀄리티 높은 사진 완성!</p>
                             </div>
                             <div class="pic">
-                                <div class="pic_size">
+                                <a href="#" class="pic_size">
                                     <img src="img/camera_3.png" alt="">
-                                </div>                               
+                                </a>                               
                                 <p class="pic_txt">내가 만드는 스탬프</p>
                                 <p class="pic_subtxt">직접 스탬프를 만들어서 편집할 수 있어요.</p>
                             </div>
@@ -1089,47 +1019,44 @@
                     </div>
                     <div class="menu_4sec_wrap">
                         <ul class="menu_4sec">
-                            <li class="sec1"><div class="con_img con1"></div></li>
-                            <li class="sec2"><div class="con_img con4"></div></li>
-                            <li class="sec3"><div class="con_img con2"></div></li>
-                            <li class="sec4"><div class="con_img con3"></div></li>
+                            <li class="sec1"><a href="#" title="롯데월드몰점 오픈기념 이벤트"><div class="con_img con1"></div></a></li>
+                            <li class="sec2"><a href="#" title="클로버 스마트 스피커 챔프"><div class="con_img con4"></div></a></li>
+                            <li class="sec3"><a href="#" title="클로버 웨이브"><div class="con_img con2"></div></a></li>
+                            <li class="sec4"><a href="#" title="팝콘 버즈 글로벌 출시"><div class="con_img con3"></div></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="sec1920">
-                <div class="wrap1440">
-                    
+                <div class="top_con">
                     <div class="pic_sec2">
                         <div class="center_title2">CLOSING THE DISTANCE</div>
                         <div class="pic2">
-                            <div class="pic_size2">
+                            <a href="#" class="pic_size2">
                                 <img src="img/pic_1.png" alt="">
                                 <div class="bottom_txtwrap">
                                     <p class="bottom_txt">BUSINESS<br>CONTACT</p>
                                     <p class="bottom_subtxt">비지니스 제휴 문의</p>
                                 </div>
-                            </div>
-                          
+                            </a>
                         </div>
                         <div class="pic2">
-                            <div class="pic_size2">
+                            <a href="#" class="pic_size2">
                                 <img src="img/pic_2.png" alt="">
                                 <div class="bottom_txtwrap">
-                                        <p class="bottom_txt">라인프렌즈 <br>플래그십 스토어</p>
-                                        <p class="bottom_subtxt">스토어 바로가기</p>
-                                    </div>
-                            </div>
-                           
+                                    <p class="bottom_txt">라인프렌즈 <br>플래그십 스토어</p>
+                                    <p class="bottom_subtxt">스토어 바로가기</p>
+                                </div>
+                            </a>                          
                         </div>
                         <div class="pic2">
-                            <div class="pic_size2">
+                            <a href="#" class="pic_size2">
                                 <img src="img/pic_3.png" alt="">
                                 <div class="bottom_txtwrap">
-                                        <p class="bottom_txt">일과 사람</p>
-                                        <p class="bottom_subtxt">채용 문의</p>
-                                    </div>
-                            </div>                               
+                                    <p class="bottom_txt">일과 사람</p>
+                                    <p class="bottom_subtxt">채용 문의</p>
+                                </div>
+                            </a>                               
                            
                         </div>
                     </div>
@@ -1137,21 +1064,21 @@
 
                 
             </div>
-            <div class="last_img"></div>
+            <div class="last_img"><img src="./img/last_img.png" alt=""></div>
             
         <footer>
 
             <div class="footer_ulbox">
             <ul class="footer_ul">
-                    <li>도움말</li>
-                    <li>이용약관</li>
-                    <li>개인정보 처리방침</li>
-                    <li>LINE Social Plugins</li>
-                    <li>LINE Creators Market</li>
-                    <li>LINE 로고 사용 가이드</li>
-                    <li>LINE 파트너스</li>
-                    <li>LINE 블로그</li>
-                    <li>채용정보</li>
+                <li><a href="#">도움말</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">LINE Social Plugins</a></li>
+                <li><a href="#">LINE Creators Market</a></li>
+                <li><a href="#">LINE 로고 사용 가이드</a></li>
+                <li><a href="#">LINE 파트너스</a></li>
+                <li><a href="#">LINE 블로그</a></li>
+                <li><a href="#">채용정보</a></li>
             </ul> 
             <div class="address">
                 <p>ⓒ LINE Corporation</p>
@@ -1160,15 +1087,6 @@
            
         </footer>
         </div>
-
-
-
-
-
-
-
-
-
     </div>
 
     <script>
@@ -1194,7 +1112,6 @@
             var index2 = 1;
             var index3 = 1;
             $('#right').click(function(){ 
-            // console.log("dd: " + index);
                 btn_init();
                 slide_move('.slide',(index - 1) % $('.slide').length, '-100%', index % $('.slide').length,'100%');
                slide_circle(index % $('.slide').length);
@@ -1239,24 +1156,12 @@
                 slide_move('.slide_3', index3 % $('.slide_3').length, '100%', (index3-1) % $('.slide_3').length, '-100%' );
             });
              $(".order_circle").click(function(){ 
-                // console.log($(this).index()); 
-                // index = $(this).index();
                 slide_move('.slide',(index-1) % $('.slide').length, '-100%', $(this).index() % $('.slide').length,'100%');
-                // $('#right').trigger('click');
                 index = $(this).index()+1;
-
-                // $(this).children(".circle_img").addClass("on");
-                // $('.order_circle').not(this).children(".circle_img").removeClass('on');
-                
-                // var btn_index = $(this).index();
              });
-    //     console.log($('.icon_list').children().children())
-    //   console.log($('.icon_list').find('img').attr('src'));
+   
              $('.icon_list li').click(function(){
                 btn_init();       
-
-                // $('.icon_list li').children('img').attr("src", $('.icon_list li').children('img').attr("src").replace("_on.png","_off.png"));
-
                 var tmp_array = ["img/line_call_off.png",
                  "img/line_at_off.png",
                  "img/line_game_off.png",
@@ -1264,29 +1169,20 @@
                  "img/line_live_off.png",
                  "img/line_camera_off.png"];            
 
-                // $(this).children('img').attr("src", $(this).children('img').attr("src").replace("_off.png","_on.png"));
-                // $('.icon_list li').not(this).children('img')
-                // .attr("src",  $('.icon_list li').not(this).children('img').attr("src").replace("_on.png","_off.png"));
                 for(var i = 0; i < tmp_array.length; i++) {
                     $('.icon_list li').eq(i).children('img').attr("src", tmp_array[i]);
                 }
                 $(this).children('img').attr("src", $(this).children('img').attr("src").replace("_off.png","_on.png"));
 
-               
-                //   index3 = $(this).index();
                  slide_move('.slide_3', (index3 - 1) % $('.slide_3').length, '-100%', $(this).index() % $('.slide_3').length,'100%');
                  index3 = $(this).index() + 1;
              });
 
-//////////////////////////
-$('.circle_img').click(function(){
-    // alert($(this).parent().index());
-    slide_circle($(this).parent().index())
-});
+                $('.circle_img').click(function(){
+                    // alert($(this).parent().index());
+                    slide_circle($(this).parent().index())
+                });
 
-
-////////////////////////////
-             
             //---------------------------------------------------------------
             function btn_init(){
                 $('.header_btn, .n_slide_btn, .s3_slide_btn, .icon_list li').css('pointer-events','none');
@@ -1295,8 +1191,7 @@ $('.circle_img').click(function(){
                     $('.header_btn, .n_slide_btn, .s3_slide_btn, .icon_list li').css('pointer-events','auto');
                     $('.header_btn, .n_slide_btn, .s3_slide_btn, .icon_list li').css('pointer-events','auto');
                 },slide_interval);
-
-                // $('.header_btn').attr('disabled', true);
+ 
             }
             function slide_move(slide,now_index, now_pos, next_index, next_pos){ 
                 $(slide).eq(now_index).animate({
@@ -1315,10 +1210,9 @@ $('.circle_img').click(function(){
                 
             }
             function slide_circle(btn){
-                console.log("dd" + btn);
                 $(".circle_img").removeClass('on');  
                 $(".circle_img").eq(btn).addClass("on"); 
-                // $(".circle_img").eq(!btn).removeClass('on');
+            
             }
             // --------------------------------------------------------------------
             var timer;
@@ -1328,7 +1222,6 @@ $('.circle_img').click(function(){
                 },3000);
             }
 
-            //   $('.slide').hover(function(){
               $('.header, .slide_3').hover(function(){
                 clearInterval(timer);
             }, function(){
@@ -1337,7 +1230,6 @@ $('.circle_img').click(function(){
             
             $(window).scroll(function() {
 
-            //    console.log($(window).scrollTop())
             if($(this).scrollTop() >= 1000){
                 $('.congrat').css({
                     opacity: 1,
@@ -1348,7 +1240,7 @@ $('.circle_img').click(function(){
             if($(this).scrollTop() >= 2800){
                 $('.pic_sec2').css({
                     opacity: 1,
-                    background: '#fff',
+                    background: '#fefefe',
                     top: '100px',
                     transition: "all .4s"
                 })

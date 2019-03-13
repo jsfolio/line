@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge; chrome =1">
+    <meta name="description" content="웹 퍼블리셔 포트폴리오">
+    <meta name="keywords" content="웹 퍼블리셔, 포트폴리오">
+    <meta name="author" content="jhm">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="test">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="웹 퍼블리셔 포트폴리오">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="test">
+    <meta name="twitter:description" content="웹 퍼블리셔 포트폴리오">
+
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-     <link rel="stylesheet" href="line_menuwhite.css">
-     <link rel="stylesheet" href="footer_css.css">
-     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+     <link rel="stylesheet" href="css/common.css">
+     <link rel="stylesheet" href="css/footer_css.css">
     <title>LINE │ 회사소개</title>
     <style>
-        .content{
-            width:100%;
-            margin:0 auto;
-            position: relative;
-        }
+ 
         .sec1920{
-            width:100%;
             background:#f5f5f5;
         }
         .sec1920_2{
-            width:100%;
             overflow: hidden;
-        }
-        .top_con{
-            width:1440px;
-            margin:0 auto;
         }
         .aboutus_wrap{
             overflow: hidden;
@@ -34,25 +35,14 @@
         }
         .big_news{
             width:688px;
-            overflow: hidden;
             float: left;
-            position: relative;
         }
-       
-        .news_img1{
-            width:100%;
-            height:541px;
-            background:url('img/aboutus_img1.png') no-repeat;
-        }
-
         .title:hover{
             text-decoration: underline;
             cursor: pointer;
         }
-
         .news{
             width:726px;
-
             float: right;
             border-left:1px solid #d6d6d6;
             box-sizing: border-box;
@@ -65,42 +55,22 @@
             float: right;
             border-left:1px solid #d6d6d6;
             box-sizing: border-box;
-  
         }
         .news li{
             width:318px;
             float:right;
-            list-style: none;
-            position: relative;
         }
         .height254{
-            width:100%;
             height:254px;
-            background:gray;
-        }
-        .news_img2{
-            background:url('img/aboutus_img2.png') no-repeat;
-        }
-        .news_img5{
-            background:url('img/aboutus_img5.png') no-repeat;
         }
         .height290{
-            width:100%;
             height:290px;
-            background:gray;
-        }
-        .news_img3{
-            background:url('img/aboutus_img3.png') no-repeat;
-        }
-        .news_img4{
-            background:url('img/aboutus_img4.png') no-repeat;
         }
         .news_txt{
             padding:8px 10px 8px 0;
             height:172px;
             margin:22px 0 50px 0;
             box-sizing: border-box;
-
         }
         .txt_box{
             display: inline-block;
@@ -122,9 +92,8 @@
             font-family:'Times New Roman', Times, serif;
         }
         .news_bold{
-            width:100%;
+            display:block;
             font-size:26px;
-            cursor: pointer;
             margin-top:14px;
         }
         .news_bold:hover{
@@ -137,7 +106,6 @@
         }
         .graph_img{
             margin-top:50px;
-            width:100%;
             height:720px;
             background: gray;
         }
@@ -145,7 +113,6 @@
             margin-top:50px;
             width:100%;
             height:400px;
-
         }
         ul.menu li:nth-child(1) a{
             color:#00b800;
@@ -176,78 +143,78 @@
     </style>
 </head>
 <body>
-    <div class="top_wrap">
+    <div class="wrapper">
         
-        <div class="header">        
+        <header>        
             <div class="menuwrap">
-                <a href="index.html"><div class="logo"></div></a>
+                <h1><a href="index.html">
+                    <img src="./img/linelogo.png" alt="라인 코퍼레이션">
+                </a></h1>
                 <ul class="menu">
                     <li class="menusec1"><a href="line_aboutus.html">회사소개</a></li>
                     <li class="menusec1"><a href="line_service.html">서비스</a></li>
                     <li class="menusec2"><a href="line_support.html">고객지원</a></li>
                     <li class="menusec2"><a href="line_mall.html">LINE STORE</a></li>
                 </ul>
-                <div class="search_box"> 
-                
+                <div class="search_box">    
                     <div class="icon"></div>
                     <input type="search" placeholder="search">
                </div>   
             </div> 
-        </div>
+        </header>
 
         <div class="content">
             <div class="sec1920">
                 <div class="top_con">
                     <div class="aboutus_wrap">
                         <div class="big_news"> 
-                            <div class="news_img1"></div>
+                            <div class="news_img1"><img src="./img/aboutus_img1.png" alt=""></div>
                             <div class="news_txt">
                                 <p class="txt_box">Updated</p><p class="update">18/12/20</p>
-                                <p class="news_bold">Closing the distance, <br> 생활 전반을 아우르는 글로벌 Life 플랫폼으로</p>
+                                <a href="#" class="news_bold">Closing the distance, <br> 생활 전반을 아우르는 글로벌 Life 플랫폼으로</a>
                                 <p class="news_con">
                                     3년 만에 전세계 월간 실 사용자 수 2억 명 이상을 확보한 LTE급 성장!<br>
                                     50개 국의 다른 국적의 동료들과 함께 일하며 글로벌 마인드 향상<br>
                                     호칭, 서열 파괴! 수평적인 기업문화를 자랑하는 일하기 좋은 기업
-                                </p>
-                                
-                            </div>
+                                </p>                              
+                           </div>
                        </div>
                         <div class="news">
                             <ul>
                                 <li>
-                                    <div class="height254 news_img2"></div>
+                                    <div class="height254"><img src="./img/aboutus_img2.png" alt=""></div>
                                     <div class="news_txt">
-                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
-                                        <p class="news_bold">LINE's Mission</p>
+                                        <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <a href="#" class="news_bold">LINE's Mission</a>
                                         <p class="news_con">‘MISSION’을 달성하기 위해 LINE 그룹 멤버들은
                                             ‘LINE STYLE’과 ‘LINE CODE’에 따라 행동해야 합니다.</p>
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="height290 news_img3"></div>
+                                    <div class="height290"><img src="./img/aboutus_img3.png" alt=""></div>
                                     <div class="news_txt">
-                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
-                                        <p class="news_bold">LINE그룹 행동 규범</p>
+                                        <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <a href="#" class="news_bold">LINE그룹 행동 규범</a>
                                         <p class="news_con">본 행동 규범은 LINE그룹의 모두가 준수해야 하는 법적, 윤리적 행동 규범 입니다.</p>
                                     </div>
                                 </li>
                             </ul> 
                             <ul>
                                 <li>
-                                    <div class="height290 news_img4"></div>
+                                    <div class="height290"><img src="./img/aboutus_img4.png" alt=""></div>
                                     <div class="news_txt">
-                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
-                                        <p class="news_bold">기사 및 보도자료</p>
+                                        <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <a href="#" class="news_bold">기사 및 보도자료</a>
                                         <p class="news_con">라인, 보안 역량 강화 위해 세계적 화이트해커로 구성된 ‘그레이해쉬’ 인수</p>
 
                                     </div>
                                 </li>
                                 
                                 <li>
-                                    <div class="height254 news_img5"></div>
+                                    <div class="height254"><img src="./img/aboutus_img5.png" alt=""></div>
                                     <div class="news_txt">
-                                            <p class="txt_box">Updated</p><p class="update">18/12/20</p>
-                                        <p class="news_bold">LINE 로고 사용 가이드</p>
+                                        <p class="txt_box">Updated</p><p class="update">18/12/20</p>
+                                        <a href="#" class="news_bold">LINE 로고 사용 가이드</a>
                                         <p class="news_con">LINE 및 관련 서비스의 로고, 아이콘을 사용할 경우 본 가이드라인을 지켜주세요.</p>
                                     </div>
                                 </li>
@@ -260,7 +227,7 @@
             <div class="sec1920_2">
                 <img src="img/aboutus_center.png" alt="">
                     <div class="top_con">
-                        <img src="img/increase.png" alt="">
+                        <img src="img/increase.png" alt="라인회사 규모성장 이미지. 2018년에 들어서 5,106,165백만 원의 규모로 성장하였다.">
                         <div class="aboutus_text">
                             <div class="abt_txt abt_txt1">
                                 <p class="news_bold2">LINE</p>
@@ -284,15 +251,15 @@
 
                 <div class="footer_ulbox">
                 <ul class="footer_ul">
-                        <li>도움말</li>
-                        <li>이용약관</li>
-                        <li>개인정보 처리방침</li>
-                        <li>LINE Social Plugins</li>
-                        <li>LINE Creators Market</li>
-                        <li>LINE 로고 사용 가이드</li>
-                        <li>LINE 파트너스</li>
-                        <li>LINE 블로그</li>
-                        <li>채용정보</li>
+                   <li><a href="#">도움말</a></li>
+                   <li><a href="#">이용약관</a></li>
+                   <li><a href="#">개인정보 처리방침</a></li>
+                   <li><a href="#">LINE Social Plugins</a></li>
+                   <li><a href="#">LINE Creators Market</a></li>
+                   <li><a href="#">LINE 로고 사용 가이드</a></li>
+                   <li><a href="#">LINE 파트너스</a></li>
+                   <li><a href="#">LINE 블로그</a></li>
+                   <li><a href="#">채용정보</a></li>
                 </ul> 
                 <div class="address">
                     <p>ⓒ LINE Corporation</p>
@@ -300,16 +267,12 @@
                 </div>
                
         </footer>
-        <!-- <input type="hidden" id="page_count" value="1"> -->
+        
     </div>
 
     <script>
       $(document).ready(function(){
             $('.aboutus_wrap').fadeIn('slow');
-    
-            // if($('#page_count').val() == 1) {
-            //     $('ul.menu li:nth-child('+  + ') a::after')
-            // }
       });
     </script>
 </body>

@@ -1,12 +1,9 @@
 footer{
     clear:both;
-    width:100%;
-   overflow: hidden;
+    overflow: hidden;
     background:#232323;
     text-align: center;
 }
-
-
 .footer_ulbox{
     clear: both;
     width:1200px;
@@ -20,19 +17,15 @@ footer{
     padding: 50px;
     box-sizing: border-box;
     color:#bdbdbd;
-    
 }
-
-.footer_ul > li{
-    list-style:none;
+.footer_ul > li a{
     float: left;
     margin-right: 20px;
-    cursor: pointer;
+    color:#bdbdbd;
 }
 .footer_ul > li:first-child{
     margin-left:30px;
 }
-
 
 .address > p{
     width:100%;
