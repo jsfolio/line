@@ -685,6 +685,9 @@
         .menu_4sec li:hover .con_img{
             transform: scale(1.1);
         }
+        .last_img img{
+            width:100%;
+        }
 
     </style>
 </head>
@@ -1179,7 +1182,6 @@
              });
 
                 $('.circle_img').click(function(){
-                    // alert($(this).parent().index());
                     slide_circle($(this).parent().index())
                 });
 
@@ -1246,7 +1248,7 @@
                 })
             }
             });
-
+            $('.modalclose, .modal').trigger('click');
             $('.play_btn').click(function(){ 
                 $('body').on('scroll touchmove mousewheel', function(event) {
                     event.preventDefault();
@@ -1268,7 +1270,7 @@
                 $('body').off('scroll touchmove mousewheel');
             });
 
-            $('.modalclose, .modal').trigger('click');
+            
      });
     </script>
 </body>
